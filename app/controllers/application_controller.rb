@@ -11,7 +11,9 @@ class App < Sinatra::Base
     
     post '/teams' do 
       @team = Team.new(params[:team])
-      params[:team][]
+      params[:team][:members].map do |el|
+        @members = Member
+      end 
       erb :team
     end 
 end
